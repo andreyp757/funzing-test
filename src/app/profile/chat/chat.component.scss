@@ -1,0 +1,44 @@
+ion-content {
+    --background: #f7f7f7;
+}
+.chat-title {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #7d4281;
+    font-size: 0.9em;
+    padding: 10px;
+    border-bottom: 1px solid #e3e3e3;
+    position: fixed;
+    width: 100%;
+    .close-btn {
+        float: left;
+        color: #333;
+        outline: none;
+    }
+}
+.chat-input {
+    position: fixed;
+    bottom: 10px;
+    width: calc(100% - 20px);
+    margin: auto 10px;
+    ion-textarea {
+        width: 100%;
+        background: #fff;
+        padding: 7px 70px 7px 7px;
+        outline: none;
+    }
+    .send-btn {
+        position: absolute;
+        top: 7px;
+        right: 0;
+        padding: 10px 20px;
+        color: #7d4281;
+        z-index: 1000;
+        font-weight: bold;
+    }
+}
+.chat-messages {
+    margin: 40px auto 70px; 
+}
+
