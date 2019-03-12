@@ -7,7 +7,7 @@ export class Message {
         public host?: boolean
     ){
         this.value = value;
-        this.date = date ? date : moment(new Date).format('LLL'); // TODO ajust normal format
+        this.date = date ? date : moment(new Date).format('DD.MM.YY, h:mm a');
         this.host = host ? true : false;
     }
 }

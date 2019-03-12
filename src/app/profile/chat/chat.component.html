@@ -6,21 +6,21 @@
     </ion-title>
     <ion-icon name="search" size="large" slot="end"></ion-icon>
   </ion-toolbar>
-  <!-- <ion-toolbar>
-    <ion-back-button text="" icon="close"></ion-back-button>
-    <ion-title>Chat with Merry</ion-title>
-  </ion-toolbar> Ionic 4 bug https://github.com/ionic-team/ionic/pull/17224 -->
 </ion-header>
 
 <ion-content>
-  <section class="chat-title" >
+  <section class="chat-title">
     <span class="close-btn" routerLink="/profile" (click)="goBack()">&#10005;</span> Chat with Merry
   </section>
-  <section class="chat-messages">
-    <div *ngFor="let msg of (chatSet | async).messages">{{msg.value}}</div>
+  <section class="chat-messages" [style.paddingTop]="scrollIndent + 'px'">
+    <div class="cm-item" [ngClass]="{ 'host' : msg.host }" *ngFor="let msg of chatSet | async" #UImessageList>
+      <div class="cm-image" *ngIf="msg.host"></div>
+      <div class="cm-msg">{{ msg.value }}</div>
+      <div class="cm-date">{{ msg.date }}</div>
+    </div>
   </section>
   <section class="chat-input">
-    <ion-textarea rows="1" [(ngModel)]="currentMsg"></ion-textarea>
-    <div class="send-btn" (click)="sendMsg()">SEND</div>
+    <ion-textarea rows="1" [(ngModel)]="currentMsg" placeholder="Type ..."></ion-textarea>
+    <div class="send-btn" (click)="sendMsg()">Send</div>
   </section>
 </ion-content>
