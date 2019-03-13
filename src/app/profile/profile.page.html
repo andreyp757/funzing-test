@@ -6,9 +6,47 @@
     </ion-title>
     <ion-icon name="search" size="large" slot="end"></ion-icon>
   </ion-toolbar>
-  <!-- <ion-toolbar></ion-toolbar> Ionic 4 bug https://github.com/ionic-team/ionic/pull/17224 -->
 </ion-header>
 
-<ion-content padding>
-  <ion-button (click)="goChat()">Contact Me</ion-button>
+<ion-content>
+  <section class="profile-subtitle">
+    <div class="close-btn" (click)="goHome()">&#10005;</div>
+    <div class="ps-title">
+      <div class="ps-event">How to build emotional intimacy</div>
+      <div class="ps-rating">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star-half"></ion-icon>
+      </div>
+    </div>
+    <div class="ps-actions">
+        <ion-icon name="cloud-upload"></ion-icon>
+        <ion-icon name="heart-empty"></ion-icon>
+    </div>
+  </section>
+  <section class="profile-content">
+    <div class="pc-host">
+      <div class="pc-avatar"></div>
+      <div class="pc-name">Almee C. Teesdale</div>
+      <div class="pc-follow">
+        <ion-icon name="person-add"></ion-icon>
+        Follow me
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </div>
+    </div>
+    <ion-button (click)="goChat()" fill="outline">Contact Me</ion-button>
+    <br>
+    <ion-button>Request private event</ion-button>
+    <div class="pc-description">
+        <p>5 Ways to Develop Emotional Intimacy In Your Relationshiptrue love. </p>
+        <p>When you meet the love that you are meant to have, you want everything to be perfect. Bonding with your partner means a process of continuously learning about each other and what you need to make yourselves happy, and continuing to cultivate emotional intimacy in your relationship.</p>
+        <p>In a study of married partners, researchers found that “emotional skillfulness, specifically the ability to identify and communicate emotions, plays a role in the maintenance of marital adjustment through its effects on the intimacy process.” Learning to express your feelings to your partner is important for having emotional intimacy in your relationship.</p>
+        <p>Commitment, communication and cooperation are the keys to a successful relationship, however, a great relationship takes more than that. When you are looking for deep, emotional intimacy in your relationship, you can do more to increase the strength of your bond.</p>
+    </div>
+  </section>
+  <section class="profile-footer">
+      <ion-button expand="block">Book now</ion-button>
+  </section>
 </ion-content>

@@ -1,0 +1,94 @@
+.profile-subtitle {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: "close title actions";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #7d4281;
+    font-size: 0.9em;
+    padding: 10px;
+    border-bottom: 1px solid #e3e3e3;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    .close-btn {
+        grid-area: close;
+        float: left;
+        color: #333;
+        outline: none;
+    }
+    .ps-title {
+        grid-area: title;
+        text-align: center;
+        .ps-event {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ps-rating {
+            color: #ffc000;
+        }
+    }
+    .ps-actions {
+        grid-area: actions;
+        text-align: right;
+        > * {
+            margin: 3px 5px;
+        }
+    }
+}
+.profile-content {
+    margin: 70px auto 80px; 
+    min-height: calc(100% - 150px);
+    padding: 0 15px;
+    .pc-host {
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 100%;
+        .pc-avatar {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-image: url('https://pbs.twimg.com/profile_images/649305173488238592/g294dJT4_400x400.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            float: left;
+            margin-right:20px; 
+        }
+        .pc-name {
+            font-weight: bold;
+            margin: 10px auto;
+            font-size: 1.2em;
+        }
+        .pc-follow {
+            color: #7d4281;
+            display: flex;
+            ion-icon {
+                margin: auto 5px;
+            }
+        }
+    }
+    ion-button {
+        width: 60%;
+        max-width: 250px;
+    }
+    .pc-description {
+        margin-top: 20px; 
+        color: #333;
+        p {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+        }
+    }
+}
+.profile-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 5px 10px 10px;
+    background: #f7f7f7;
+    z-index: 10;
+}
