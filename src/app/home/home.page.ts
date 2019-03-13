@@ -12,7 +12,7 @@ export class HomePage {
   }
 
   public selectHost(id, name) {
-    this.router.navigate(['/profile', { id: id, name: name }])
+    this.router.navigate(['/profile', { id: id, name: name }]);
   }
 
 }

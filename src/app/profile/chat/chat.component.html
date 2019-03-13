@@ -10,7 +10,7 @@
 
 <ion-content>
   <section class="chat-subtitle">
-    <span class="close-btn" (click)="goBack()">&#10005;</span> Chat with Merry
+    <span class="close-btn" (click)="goBack()">&#10005;</span> Chat with Almee C. Teesdale
   </section>
   <section class="chat-messages" [style.paddingTop]="scrollIndent + 'px'">
     <div class="cm-item" [ngClass]="{ 'host' : msg.host }" *ngFor="let msg of chatSet | async" #UImessageList>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-profile',
@@ -9,18 +10,21 @@ import { NavController } from '@ionic/angular';
 })
 export class ProfilePage implements OnInit {
 
-  readonly chatId: number = 1234;
+  private chatId: number;
   public hostName: string = 'Incognito';
 
-  constructor(private router: Router, private navCtrl: NavController) {
+  constructor(private route:ActivatedRoute, private router: Router, private navCtrl: NavController) {
   }
 
   ngOnInit() {
-    
+    this.route.params.subscribe(param => {
+      this.chatId = param.id;
+      this.hostName = param.name;
+    })
   }
 
   goChat(){
-    this.router.navigateByUrl('/profile/' + this.chatId)
+    this.router.navigateByUrl('/profile/chat/' + this.chatId)
   }
 
   goHome(){

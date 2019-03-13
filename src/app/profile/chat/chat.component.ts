@@ -49,7 +49,7 @@ export class ChatComponent implements OnInit {
   }
 
   goBack() {
-    this.navCtrl.navigateBack('/profile');
+    this.navCtrl.back();
   }
 
   sendMsg(){
